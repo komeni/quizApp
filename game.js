@@ -22,7 +22,7 @@ let questions = [
     choice2: "<script name = 'xxx.js'>",
     choice3: "<script src = 'xxx.js'>",
     choice4: "<script url = 'xxx.js'>",
-    answer: 1
+    answer: 3
     },
     {
     question: "How do you write 'Hello world' in the alert box?",
@@ -69,8 +69,16 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        getNewQuestion();
+
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        setTimeout( () => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000)
     })
 })
 
 startGame();
+
