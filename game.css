@@ -23,3 +23,9 @@
     transform: translateY(-0.1rem);
     transform: transform 150ms;
 }
+.correct {
+    background: #28a745;
+}
+.incorrect {
+    background: #dc3545;
+}

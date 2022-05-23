@@ -94,3 +94,9 @@ h3{
     box-shadow: none;
     transform: none;
 }
+.correct {
+    background: #28a745;
+}
+.incorrect {
+    background: #dc3545;
+}
