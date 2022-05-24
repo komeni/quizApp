@@ -24,8 +24,21 @@
     transform: transform 150ms;
 }
 .correct {
-    background: #28a745;
+    background: #60d87c;
 }
 .incorrect {
-    background: #dc3545;
+    background: #df5260;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+.hud-main-text {
+    text-align: center;
 }
